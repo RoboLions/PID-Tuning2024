@@ -4,6 +4,8 @@
 
 package frc.robot;
 
+import org.littletonrobotics.junction.LoggedRobot;
+
 import com.ctre.phoenix6.StatusCode;
 import com.ctre.phoenix6.configs.FeedbackConfigs;
 import com.ctre.phoenix6.configs.MotionMagicConfigs;
@@ -22,7 +24,7 @@ import frc.robot.sim.PhysicsSim;
  * the package after creating this project, you must also update the build.gradle file in the
  * project.
  */
-public class Robot extends TimedRobot {
+public class Robot extends LoggedRobot {
   private final TalonFX m_fx = new TalonFX(1, "canivore");
   private final MotionMagicVoltage m_mmReq = new MotionMagicVoltage(0);
   private final XboxController m_joystick = new XboxController(0);
