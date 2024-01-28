@@ -53,20 +53,21 @@ public class Robot extends LoggedRobot {
 
     /* Configure current limits */
     MotionMagicConfigs mm = cfg.MotionMagic;
-    mm.MotionMagicCruiseVelocity = 5; // 5 rotations per second cruise
-    mm.MotionMagicAcceleration = 10; // Take approximately 0.5 seconds to reach max vel
+    mm.MotionMagicCruiseVelocity = 60; // 5 rotations per second cruise
+    mm.MotionMagicAcceleration = 325; // Take approximately 0.5 seconds to reach max vel
     // Take approximately 0.2 seconds to reach max accel 
-    mm.MotionMagicJerk = 50;
+    mm.MotionMagicJerk = 0;
 
     Slot0Configs slot0 = cfg.Slot0;
-    slot0.kP = 60;
+    slot0.kP = 0;
     slot0.kI = 0;
-    slot0.kD = 0.1;
-    slot0.kV = 0.12;
-    slot0.kS = 0.25; // Approximately 0.25V to get the mechanism moving
+    slot0.kD = 0;
+    slot0.kA = 0.0202;
+    slot0.kV = 0.109;
+    slot0.kS = 0.2; // Approximately 0.25V to get the mechanism moving
 
     FeedbackConfigs fdb = cfg.Feedback;
-    fdb.SensorToMechanismRatio = 12.8;
+    fdb.SensorToMechanismRatio = 12.8; //6.75:1
 
     StatusCode status = StatusCode.StatusCodeNotInitialized;
     for(int i = 0; i < 5; ++i) {
