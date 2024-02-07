@@ -107,7 +107,7 @@ public class Robot extends LoggedRobot {
 
     m_fx.setControl(m_mmReq.withPosition(leftY * 10).withSlot(0));
     if(m_joystick.getBButton()) {
-      m_fx.setPosition(1);
+      
     }
   }
 
