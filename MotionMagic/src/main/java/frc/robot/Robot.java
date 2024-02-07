@@ -59,12 +59,12 @@ public class Robot extends LoggedRobot {
     mm.MotionMagicJerk = 0;
 
     Slot0Configs slot0 = cfg.Slot0;
-    slot0.kP = 0;
-    slot0.kI = 0;
-    slot0.kD = 0;
+    slot0.kP = 0.31;
+    slot0.kI = 0.2;
+    slot0.kD = 0.;
     slot0.kA = 0.0202;
     slot0.kV = 0.109;
-    slot0.kS = 0.2; // Approximately 0.25V to get the mechanism moving
+    slot0.kS = 0.2; // Approximately 0.25V to get the mechanis     m moving
 
     FeedbackConfigs fdb = cfg.Feedback;
     fdb.SensorToMechanismRatio = 12.8; //6.75:1
